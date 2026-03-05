@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Guides</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="data.js"></script>
+
+</head>
+
+<body>
+
+<h1>Guides</h1>
+
+<div id="guideList"></div>
+
+<script>
+
+let container=document.getElementById("guideList");
+
+guides.forEach(g=>{
+
+container.innerHTML+=`
+
+<div class="card">
+
+<h3>${g.title}</h3>
+
+<p>${g.summary}</p>
+
+<a href="guide.html?id=${g.id}" class="btn">Read Guide</a>
+
+</div>
+
+`
+
+});
+
+</script>
+
+</body>
+</html>
