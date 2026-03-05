@@ -1,98 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Online Reward Guide</title>
 
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#1fa463,#37c97b);
-}
-
-header{
-text-align:center;
-color:white;
-padding:40px 20px;
-}
-
-header h1{
-margin:0;
-font-size:32px;
-}
-
-header p{
-opacity:0.9;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
-
-.guide{
-background:white;
-padding:20px;
-margin:15px 0;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.guide h3{
-margin:0 0 10px;
-}
-
-button{
-background:#1fa463;
-border:none;
-padding:10px 18px;
-border-radius:8px;
-color:white;
-cursor:pointer;
-}
-
-button:hover{
-background:#168a52;
-}
-
-.details{
-display:none;
-margin-top:10px;
-line-height:1.6;
-}
-
-footer{
-text-align:center;
-padding:30px;
-color:white;
-}
-
-</style>
-
-<script>
-
-function toggleGuide(id){
-
-var x=document.getElementById(id);
-
-if(x.style.display==="block")
-{
-x.style.display="none";
-}
-else
-{
-x.style.display="block";
-}
-
-}
-
-</script>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -102,47 +16,31 @@ x.style.display="block";
 
 <h1>Online Reward Guide</h1>
 
-<p>Explore guides about reward platforms and online opportunities</p>
+<p>Explore online reward platforms and guides</p>
+
+<a class="btn" href="guides.html">Browse Guides</a>
 
 </header>
 
-<div class="container">
+<section class="categories">
 
-<script>
+<h2>Categories</h2>
 
-for(let i=1;i<=100;i++){
+<div class="catgrid">
 
-document.write(`
-<div class="guide">
+<a href="guides.html?cat=surveys">Survey Platforms</a>
 
-<h3>Guide ${i}</h3>
+<a href="guides.html?cat=rewardapps">Reward Apps</a>
 
-<p>Learn about reward platforms and online programs.</p>
+<a href="guides.html?cat=tasks">Online Tasks</a>
 
-<button onclick="toggleGuide('g${i}')">Read Guide</button>
+<a href="guides.html?cat=offers">Offer Platforms</a>
 
-<div class="details" id="g${i}">
-
-This guide explains how reward platforms and survey websites work.
-Many platforms provide points or rewards for completing activities.
-Always research platforms carefully and read their terms before joining.
+<a href="guides.html?cat=beginners">Beginner Guides</a>
 
 </div>
 
-</div>
-`);
-
-}
-
-</script>
-
-</div>
-
-<footer>
-
-© 2026 Online Reward Guide
-
-</footer>
+</section>
 
 </body>
 </html>
