@@ -10,26 +10,23 @@
 <style>
 
 body{
-font-family: Arial, sans-serif;
 margin:0;
-padding:0;
-background: linear-gradient(135deg,#1fa463,#3dd598);
-color:#222;
+font-family:Arial;
+background:linear-gradient(135deg,#1fa463,#37c97b);
 }
 
 header{
 text-align:center;
-padding:40px 20px;
 color:white;
+padding:40px 20px;
 }
 
 header h1{
-font-size:34px;
-margin-bottom:10px;
+margin:0;
+font-size:32px;
 }
 
 header p{
-font-size:18px;
 opacity:0.9;
 }
 
@@ -39,20 +36,34 @@ margin:auto;
 padding:20px;
 }
 
-.card{
+.guide{
 background:white;
-border-radius:12px;
 padding:20px;
-margin-bottom:20px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+margin:15px 0;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.card h2{
-margin-top:0;
-color:#1fa463;
+.guide h3{
+margin:0 0 10px;
 }
 
-.card p{
+button{
+background:#1fa463;
+border:none;
+padding:10px 18px;
+border-radius:8px;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#168a52;
+}
+
+.details{
+display:none;
+margin-top:10px;
 line-height:1.6;
 }
 
@@ -60,13 +71,30 @@ footer{
 text-align:center;
 padding:30px;
 color:white;
-font-size:14px;
 }
 
 </style>
 
-</head>
+<script>
 
+function toggleGuide(id){
+
+var x=document.getElementById(id);
+
+if(x.style.display==="block")
+{
+x.style.display="none";
+}
+else
+{
+x.style.display="block";
+}
+
+}
+
+</script>
+
+</head>
 
 <body>
 
@@ -74,76 +102,47 @@ font-size:14px;
 
 <h1>Online Reward Guide</h1>
 
-<p>Learn about reward apps, surveys and online reward platforms</p>
+<p>Explore guides about reward platforms and online opportunities</p>
 
 </header>
 
-
 <div class="container">
 
-<div class="card">
+<script>
 
-<h2>Reward Apps</h2>
+for(let i=1;i<=100;i++){
 
-<p>
-Many apps offer reward points for completing simple activities like
-trying new apps, watching videos, or answering surveys.
-These reward systems allow users to collect points which may later
-be exchanged for digital rewards or gift cards depending on the platform.
-</p>
+document.write(`
+<div class="guide">
 
-</div>
+<h3>Guide ${i}</h3>
 
+<p>Learn about reward platforms and online programs.</p>
 
-<div class="card">
+<button onclick="toggleGuide('g${i}')">Read Guide</button>
 
-<h2>Online Survey Platforms</h2>
+<div class="details" id="g${i}">
 
-<p>
-Survey websites allow users to share opinions on different topics.
-Companies use these responses to improve products and services.
-Some platforms offer points or small rewards for completing surveys.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h2>Reward Programs</h2>
-
-<p>
-Many websites provide loyalty programs where users earn points
-for completing tasks, signing up for services, or participating
-in promotional activities.
-Understanding how reward systems work can help users explore
-different online opportunities.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h2>Important Information</h2>
-
-<p>
-This app is created for informational purposes only.
-It provides guides and general information about reward platforms.
-The app does not guarantee earnings or financial rewards.
-</p>
+This guide explains how reward platforms and survey websites work.
+Many platforms provide points or rewards for completing activities.
+Always research platforms carefully and read their terms before joining.
 
 </div>
 
 </div>
+`);
 
+}
+
+</script>
+
+</div>
 
 <footer>
 
-<p>© 2026 Online Reward Guide</p>
+© 2026 Online Reward Guide
 
 </footer>
-
 
 </body>
 </html>
