@@ -4,7 +4,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Guides</title>
+<title>Guide</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,31 +14,25 @@
 
 <body>
 
-<h1>Guides</h1>
-
-<div id="guideList"></div>
+<div id="guide"></div>
 
 <script>
 
-let container=document.getElementById("guideList");
+let params=new URLSearchParams(window.location.search);
 
-guides.forEach(g=>{
+let id=params.get("id");
 
-container.innerHTML+=`
+let g=guides.find(x=>x.id==id);
 
-<div class="card">
-
-<h3>${g.title}</h3>
-
-<p>${g.summary}</p>
-
-<a href="guide.html?id=${g.id}" class="btn">Read Guide</a>
-
-</div>
+document.getElementById("guide").innerHTML=
 
 `
+<h1>${g.title}</h1>
 
-});
+<p>${g.content}</p>
+
+<a href="guides.html" class="btn">Back</a>
+`
 
 </script>
 
