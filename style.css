@@ -1,1 +1,43 @@
+body{
+font-family:Arial;
+background:#f4f4f4;
+margin:0;
+}
 
+header{
+text-align:center;
+padding:60px;
+background:#1fa463;
+color:white;
+}
+
+.btn{
+background:#1fa463;
+color:white;
+padding:10px 20px;
+text-decoration:none;
+border-radius:8px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.categories{
+text-align:center;
+padding:40px;
+}
+
+.catgrid a{
+display:inline-block;
+margin:10px;
+padding:10px 15px;
+background:#e8f5ec;
+border-radius:8px;
+text-decoration:none;
+color:#1fa463;
+}
